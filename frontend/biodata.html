@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>M.S. Dhoni Biodata</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        /* Reset some basics */
+        body, h1, h2, ul, ol, p, table, form {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1b263b;
+            color: #f0f0f0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #f39c12;
+            margin-bottom: 12px;
+        }
+        h1 {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 30px;
+            letter-spacing: 0.1em;
+        }
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid #f39c12;
+            padding-bottom: 6px;
+            margin-top: 40px;
+            margin-bottom: 18px;
+        }
+        img {
+            display: block;
+            max-width: 180px;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            border: 4px solid #f39c12;
+            box-shadow: 0 0 15px #f39c12;
+        }
+        ul, ol {
+            max-width: 400px;
+            margin: 0 auto 30px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 1.15rem;
+            text-align: center;
+            color: #dcdcdc;
+        }
+        table {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(243, 156, 18, 0.4);
+            background: #2c3e50;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #f39c12;
+        }
+        th {
+            background-color: #f39c12;
+            color: #1b263b;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto 50px;
+            background: #34495e;
+            padding: 25px 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(243, 156, 18, 0.5);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        input[type="email"],
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="submit"], button {
+            background-color: #f39c12;
+            color: #1b263b;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover, button:hover {
+            background-color: #e67e22;
+        }
+        /* Center and spacing for the Add Profile button */
+        .add-profile-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>M.S. Dhoni Biodata</h1>
+    
+    <!-- You should replace the src with a valid photo URL or local path -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/MS_Dhoni_2019.jpg" alt="M.S. Dhoni Photo" />
+    
+    <h2>Personal Information</h2>
+    <ul>
+        <li><strong>Name:</strong> Mahendra Singh Dhoni</li>
+        <li><strong>Age:</strong> 42</li>
+        <li><strong>Location:</strong> Ranchi, India</li>
+    </ul>
+
+    <h2>Education</h2>
+    <ol>
+        <li>Graduate in Commerce</li>
+        <li>Completed various cricket certifications and leadership training</li>
+    </ol>
+
+    <h2>About Me</h2>
+    <p>
+        Mahendra Singh Dhoni is a legendary Indian cricketer, former captain of the Indian national team, and known for his calm demeanor and aggressive batting style.
+    </p>
+
+    <h2>Skills</h2>
+    <table>
+        <tr>
+            <th>Skill</th>
+            <th>Proficiency</th>
+        </tr>
+        <tr>
+            <td>Wicketkeeping</td>
+            <td>Expert</td>
+        </tr>
+        <tr>
+            <td>Captaincy</td>
+            <td>Legendary</td>
+        </tr>
+        <tr>
+            <td>Batting</td>
+            <td>Advanced</td>
+        </tr>
+    </table>
+
+    <form id="contact-form">
+        <h2>Contact Me</h2>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+        
+        <input type="submit" value="Submit" />
+    </form>
+
+    <div class="add-profile-container">
+        <button id="addProfileBtn">Add Profile</button>
+    </div>
+
+    <script>
+        // Simple example of Add Profile button functionality:
+        document.getElementById('addProfileBtn').addEventListener('click', () => {
+            alert('Add Profile feature coming soon!');
+            // You can extend this with a modal or form for adding a new profile
+        });
+
+        // Example: Handle contact form submission (prevent default just for demo)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for contacting!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

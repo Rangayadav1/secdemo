@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTech Student - Achievements & Marks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #006400; /* Dark Green */
+            --accent: #ffb900; /* Golden Yellow */
+            --bg: #f4f6fb;
+            --card-bg: #fff;
+            --text: #222;
+            --shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+        header {
+            background: var(--primary);
+            color: #fff;
+            padding: 3rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 1.3rem;
+            margin-top: 0.5rem;
+            font-weight: 400;
+        }
+        nav {
+            margin-top: 1.5rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            opacity: 0;
+            animation: fadeInNav 2s ease-in forwards;
+        }
+        nav a:hover {
+            color: var(--accent);
+        }
+        nav a:nth-child(1) { animation-delay: 0.3s; }
+        nav a:nth-child(2) { animation-delay: 0.6s; }
+        nav a:nth-child(3) { animation-delay: 0.9s; }
+        nav a:nth-child(4) { animation-delay: 1.2s; }
+
+        .container {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background: var(--card-bg);
+            box-shadow: var(--shadow);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+        .about-img {
+            flex: 1 1 250px;
+            margin-right: 2rem;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .about-text {
+            flex: 2 1 400px;
+        }
+        .about-text h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .about-text p {
+            font-size: 1.2rem;
+            color: var(--text);
+        }
+
+        .achievements {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        .achievement-card {
+            background: var(--card-bg);
+            box-shadow: var(--shadow);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            flex: 1 1 250px;
+            transition: transform 0.3s ease-in-out;
+            min-width: 280px;
+        }
+        .achievement-card:hover {
+            transform: scale(1.05);
+            background: var(--primary);
+            color: #fff;
+        }
+        .achievement-card h3 {
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .achievement-card p {
+            font-size: 1.1rem;
+            color: var(--text);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+
+        table th, table td {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        table th {
+            background: var(--primary);
+            color: white;
+        }
+
+        footer {
+            background: var(--primary);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            font-size: 1rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInNav {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 700px) {
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-img {
+                margin: 0 0 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ranga</h1>
+        <p>Passionate about technology and innovation</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#marks">Marks</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="about-img">
+                <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="BTech Student">
+            </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    I am ranga specializing in Computer Science. I am passionate about programming, web development, and exploring the latest technological trends. I aim to contribute to the tech industry by creating innovative solutions and continuously improving my skills.
+                </p>
+                <p>
+                    In my free time, I enjoy building side projects, solving problems on competitive coding platforms, and learning about new tools and technologies.
+                </p>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements">
+            <h2 class="section-title">Achievements & Certificates</h2>
+            <div class="achievements">
+                <div class="achievement-card">
+                    <h3>Top 10 in National Coding Competition</h3>
+                    <p>I secured a spot in the top 10 of a national-level coding competition organized by XYZ Tech.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Hackathon Winner</h3>
+                    <p>Won the first prize in a state-level hackathon with a team of four, where we built a real-time data visualization tool.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Google Developer Badge</h3>
+                    <p>Earned the Google Developer Certification in Android Development after completing a comprehensive course.</p>
+                </div>
+                <div class="achievement-card">
+                    <h3>Python Masterclass Certificate</h3>
+                    <p>Completed a Python masterclass on Udemy, which enhanced my skills in data structures and algorithms.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marks Section -->
+        <section id="marks">
+            <h2 class="section-title">Semester Marks (4 Years)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Semester</th>
+                        <th>Subject</th>
+                        <th>Marks Obtained</th>
+                        <th>Total Marks</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Semester 1</td>
+                        <td>Mathematics I</td>
+                        <td>85</td>
+                        <td>100</td>
+                        <td>85%</td>
+                    </tr>
+                    <tr>
+                        <td>Semester 1</td>
+                        <td>Programming Fundamentals</td>
+                        <td>90</td>
+                        <td>100</td>
+                        <td>90%</td>
+                    </tr>
+                    <tr>
+                        <td>Semester 2</td>
+                        <td>Mathematics II</td>
+                        <td>88</td>
+                        <td>100</td>
+                        <td>88%</td>
+                    </tr>
+                    <tr>
+                        <td>Semester 2</td>
+                        <td>Data Structures</td>
+                        <td>92</td>
+                        <td>100</td>
+                        <td>92%</td>
+                    </tr>
+                    <tr>
+                        <td>Semester 3</td>
+                        <td>Operating Systems</td>
+                        <td>80</td>
+                        <td>100</td>
+                        <td>80%</td>
+                    </tr>
+                    <tr>
+                        <td>Semester 3</td>
+                        <td>Database Management</td>
+                        <td>85</td>
+                        <td>100</td>
+                        <td>85%</td>
+                    </tr>
+                    <tr>
+                        <td>Semester 4</td>
+                        <td>Computer Networks</td>
+                        <td>90</td>
+                        <td>100</td>
+                        <td>90%</td>
+                    </tr>
+                    <tr>
+                        <td>Semester 4</td>
+                        <td>Software Engineering</td>
+                        <td>87</td>
+                        <td>100</td>
+                        <td>87%</td>
+                    </tr>
+                    <tr>
+                        <td>Semester 5</td>
+                        <td>Web Development</td>
+                        <td>93</td>
+                        <td>100</td>
+                        <td>93%</td>
+                    </tr>
+                    <tr>
+                        <td>Semester 5</td>
+                        <td>Machine Learning</td>
+                        <td>89</td>
+                        <td>100</td>
+                        <td>89%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 BTech Student | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

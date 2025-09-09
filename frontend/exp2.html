@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS Dhoni - Cricket Legend</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #006400; /* Dark Green */
+            --accent: #f4b400; /* Golden Yellow */
+            --bg: #f1f8e9; /* Soft Green Background */
+            --card-bg: #ffffff;
+            --text: #2d2d2d;
+            --shadow: 0 8px 24px rgba(0,0,0,0.1);
+            --highlight: #ff5722; /* Orange Highlight */
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+        header {
+            background: var(--primary);
+            color: #fff;
+            padding: 3rem 0 2rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 1.5rem;
+            margin-top: 0.5rem;
+            font-weight: 400;
+        }
+        nav {
+            margin-top: 1.5rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--accent);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background: var(--card-bg);
+            box-shadow: var(--shadow);
+            border-radius: 12px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+        }
+        .about-img {
+            flex: 1 1 250px;
+            max-width: 250px;
+            margin-right: 2rem;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .about-img img {
+            width: 100%;
+            display: block;
+        }
+        .about-text {
+            flex: 2 1 350px;
+        }
+        .about-text h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .about-text p {
+            font-size: 1.2rem;
+            color: var(--text);
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .skill-card {
+            background: var(--card-bg);
+            box-shadow: var(--shadow);
+            border-radius: 8px;
+            padding: 1.5rem;
+            min-width: 160px;
+            text-align: center;
+            font-weight: 700;
+            color: var(--primary);
+            transition: transform 0.3s;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            background: var(--accent);
+            color: #fff;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .project-card {
+            background: var(--card-bg);
+            box-shadow: var(--shadow);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 32px rgba(0, 100, 0, 0.1);
+        }
+        .project-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background: #eee;
+        }
+        .project-content {
+            padding: 1.5rem;
+        }
+        .project-title {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        .project-desc {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 1rem;
+        }
+        .project-link {
+            text-decoration: none;
+            color: var(--accent);
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        .project-link:hover {
+            color: var(--highlight);
+        }
+        footer {
+            background: var(--primary);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 700px) {
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-img {
+                margin-bottom: 1rem;
+            }
+            .skills {
+                flex-direction: column;
+            }
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MS Dhoni</h1>
+        <p>Cricket Legend & Leader</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Achievements</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="about-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/MS_Dhoni_in_2019.jpg" alt="MS Dhoni">
+            </div>
+            <div class="about-text">
+                <h2>About MS Dhoni</h2>
+                <p>
+                    Mahendra Singh Dhoni, widely known as MS Dhoni, is one of the most successful and beloved cricketers of all time. As the former captain of the Indian national team, Dhoni led India to victory in major tournaments, including the ICC World Cup 2007 (T20), ICC World Cup 2011 (ODI), and ICC Champions Trophy 2013. His leadership, calm demeanor, and sharp cricketing acumen have made him an iconic figure in world cricket.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills">
+                <div class="skill-card">Leadership</div>
+                <div class="skill-card">Wicketkeeping</div>
+                <div class="skill-card">Captaincy</div>
+                <div class="skill-card">Batting</div>
+                <div class="skill-card">Finishing Games</div>
+                <div class="skill-card">Strategic Planning</div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="projects">
+            <h2 class="section-title">Achievements</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <img class="project-img" src="https://upload.wikimedia.org/wikipedia/commons/1/19/India_2011_World_Cup_victory.jpg" alt="World Cup 2011">
+                    <div class="project-content">
+                        <div>
+                            <div class="project-title">ICC World Cup 2011</div>
+                            <div class="project-desc">Led India to victory in the ICC World Cup 2011, securing the title after 28 years.</div>
+                        </div>
+                        <a class="project-link" href="https://en.wikipedia.org/wiki/2011_ICC_Cricket_World_Cup" target="_blank">Read More</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img class="project-img" src="https://upload.wikimedia.org/wikipedia/commons/9/90/MS

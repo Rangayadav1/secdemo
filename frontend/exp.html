@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>M.S. Dhoni - Professional Summary & Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            margin: 0;
+            padding: 0;
+            color: #f0f0f0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: #272727;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+        }
+        .summary {
+            margin-bottom: 40px;
+            border-bottom: 2px solid #4caf50;
+            padding-bottom: 20px;
+        }
+        .summary h2 {
+            margin-top: 0;
+            color: #4caf50;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .summary p {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: #ddd;
+        }
+        .projects-section h2 {
+            color: #4caf50;
+            margin-bottom: 25px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: space-between;
+        }
+        .card {
+            background: #383838;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            padding: 25px;
+            flex: 1 1 250px;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.6);
+        }
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #81c784;
+            font-weight: 600;
+        }
+        .card p {
+            margin-bottom: 0;
+            color: #ccc;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        @media (max-width: 700px) {
+            .cards {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+        footer {
+            text-align: center;
+            margin: 40px 0 20px;
+            color: #4caf50;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="summary">
+            <h2>Professional Summary</h2>
+            <p>
+                Mahendra Singh Dhoni, former captain of the Indian cricket team, is known for his calm leadership, exceptional wicket-keeping skills, and match-winning batting performances. Under his captaincy, India won the ICC T20 World Cup (2007), ICC ODI World Cup (2011), and ICC Champions Trophy (2013). Beyond cricket, Dhoni is an entrepreneur and philanthropist with a passion for mentoring young athletes.
+            </p>
+        </div>
+        <div class="projects-section">
+            <h2>Major Achievements & Projects</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Captaincy Milestones</h3>
+                    <p>Led India to victory in the 2007 ICC T20 World Cup, 2011 ICC ODI World Cup, and 2013 ICC Champions Trophy, becoming one of the most successful captains in cricket history.</p>
+                </div>
+                <div class="card">
+                    <h3>Wicketkeeping Excellence</h3>
+                    <p>Renowned for quick reflexes and smart stumping, Dhoni revolutionized wicketkeeping with his agility and unique style behind the stumps.</p>
+                </div>
+                <div class="card">
+                    <h3>Rising Pune Supergiant</h3>
+                    <p>Co-owned IPL team Rising Pune Supergiant, investing in talent development and sports management.</p>
+                </div>
+                <div class="card">
+                    <h3>Philanthropy & Mentorship</h3>
+                    <p>Actively supports various charities and mentors young cricketers, fostering the next generation of sports talent in India.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>Vibe Coder</footer>
+</body>
+</html>
