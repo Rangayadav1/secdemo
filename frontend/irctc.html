@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>IRCTC Booking</title>
+<style>
+  /* Background Image */
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  body {
+    background: url('train.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  /* Overlay */
+  body::before {
+    content: "";
+    position: fixed;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(0,0,0,0.5);
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 40px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    text-align: center;
+  }
+
+  /* Train image */
+  .train-image {
+    width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+
+  h1 {
+    margin: 0 0 20px;
+    color: #d62828;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 15px 20px;
+    align-items: center;
+  }
+
+  label {
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+  }
+  input[type="text"]:focus,
+  input[type="date"]:focus,
+  select:focus {
+    border-color: #d62828;
+    outline: none;
+  }
+
+  .full-width {
+    grid-column: 1 / span 2;
+  }
+
+  button {
+    grid-column: 1 / span 2;
+    background-color: #d62828;
+    color: white;
+    font-size: 1.1rem;
+    padding: 14px 0;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+
+  button:hover {
+    background-color: #a02121;
+  }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    form {
+      grid-template-columns: 1fr;
+    }
+    .full-width {
+      grid-column: 1;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img 
+    src="logo.jpg" 
+    alt="Train Image" 
+    class="train-image"
+  />
+  <h1>IRCTC Train Ticket Booking</h1>
+  <form>
+    <label for="from">From</label>
+    <input type="text" id="from" name="from" placeholder="Departure Station" required />
+
+    <label for="to">To</label>
+    <input type="text" id="to" name="to" placeholder="Destination Station" required />
+
+    <label for="journey-date">Journey Date</label>
+    <input type="date" id="journey-date" name="journey-date" required />
+
+    <label for="class">Class</label>
+    <select id="class" name="class" required>
+      <option value="" disabled selected>Select Class</option>
+      <option value="SL">Sleeper (SL)</option>
+      <option value="3A">AC 3 Tier (3A)</option>
+      <option value="2A">AC 2 Tier (2A)</option>
+      <option value="1A">AC First Class (1A)</option>
+      <option value="CC">Chair Car (CC)</option>
+      <option value="2S">Second Sitting (2S)</option>
+    </select>
+
+    <label for="quota">Quota</label>
+    <select id="quota" name="quota" required>
+      <option value="" disabled selected>Select Quota</option>
+      <option value="GN">General (GN)</option>
+      <option value="LD">Ladies (LD)</option>
+      <option value="PT">Premium Tatkal (PT)</option>
+      <option value="SS">Senior Citizen (SS)</option>
+      <option value="HO">Handicapped (HO)</option>
+      <option value="FT">Foreign Tourist (FT)</option>
+    </select>
+
+    <label for="passengers">Number of Passengers</label>
+    <input type="text" id="passengers" name="passengers" pattern="[1-9]" placeholder="1-9" required />
+
+    <button type="submit">Search Trains</button>
+  </form>
+</div>
+
+</body>
+</html>
